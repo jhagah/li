@@ -1,0 +1,71 @@
+<!DOCTYPE html>  
+<html>
+<head>  
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />  
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />  
+    <title>轨迹路线</title>  
+    <link rel="stylesheet" href="welcome.css">
+    <script type="text/javascript" src="https://api.map.baidu.com/api?v=3.0&ak=UtsTlFLYMka7HWAAk4X6j0cANnbddsQH">
+    </script>
+    <script type="text/javascript" src="CurveLine.min.js">
+        //http://api.map.baidu.com/library/CurveLine/1.5/src/circle.png
+    </script>
+</head>  
+ 
+<body>  
+    <div id="container"></div>
+    <ul class="drawing-panel1">
+        <li class="btn" onclick="handle()">总路线</li>
+        <select onchange="window.location=this.value;">
+            <option value="welcome.html">详细路线</option>
+            <option value="具体路线1/白岳山/白岳山.html">白岳山</option>
+            <option value="具体路线1/恒山/恒山.html">恒山</option>
+            <option value="具体路线1/黄山/黄山.html">黄山</option>
+            <option value="具体路线1/九鲤湖/九鲤湖.html">九鲤湖</option>
+            <option value="具体路线1/庐山/庐山.html">庐山</option>
+            <option value="具体路线1/闽游/闽游.html">闽游</option>
+            <option value="具体路线1/闽游2/闽游2.html">闽游2</option>
+            <option value="具体路线1/嵩山/嵩山.html">嵩山</option>
+            <option value="具体路线1/太和山/太和山.html">太和山</option>
+            <option value="具体路线1/太华山/太华山.html">太华山</option>
+            <option value="具体路线1/五台山/五台山.html">五台山</option>
+            <option value="具体路线1/武夷山/武夷山.html">武夷山</option>
+            <option value="具体路线2/天台山/天台山.html">天台山</option>
+            <option value="具体路线2/雁荡山/雁荡山.html">雁荡山</option>
+            <option value="具体路线2/后游天台山/后游天台山.html">后游天台山</option>
+            <option value="具体路线2/后游雁荡山/后游雁荡山.html">后游雁荡山</option>
+        </select>
+    </ul>
+    <ul class="drawing-panel4">
+        <select id="region" name="time" onchange="change()">
+            <option value = "1" selected>现代</option>
+            <option value = "2" >明代</option>
+        </select>
+    </ul>
+    <ul class="drawing-panel2">
+        <li>
+            <input id="value" type="text" placeholder="请输入地点关键词" list="typelist"/>        
+            <datalist id="typelist" >
+                　　<option value="天台山">天台山 浙江省台州市天台县 国家5A级旅游景区</option>
+                　　<option value="雁荡山">雁荡山 浙江省温州市乐清市 世界地质公园、国家5A级旅游景区 雁湖岗芦苇</option>
+                　　<option value="白岳山">白岳山 安徽省休宁县</option>
+                　　<option value="黄山">黄山 安徽省黄山市 世界地质公园、国家5A级旅游景区</option>
+                　　<option value="武夷山">武夷山 江西省铅山县、福建省南平市武夷山市 国家5A级旅游景区</option>
+                　　<option value="庐山">庐山、匡山、匡庐 江西省九江市庐山市 世界地质公园、国家5A级旅游景区</option>
+                　　<option value="九鲤湖">九鲤湖 福建省莆田市仙游县钟山镇 国家4A级旅游景区</option>
+                　　<option value="嵩山">嵩山 河南省郑州市登封市 世界地质公园、国家5A级旅游景区 少林寺、五岳中岳</option>
+                　　<option value="太华山">华山 陕西省渭南市华阴市 国家5A级旅游景区</option>
+                　　<option value="太和山">武当山 湖北省十堰市丹江口市 国家5A级旅游景区</option>
+                　　<option value="五台山">五台山 山西省忻州市 国家5A级旅游景区</option>
+                　　<option value="恒山">恒山 山西省大同市浑源县 五岳北岳</option>
+            </datalist>
+        </li>
+        <li class="btn" onclick="get()">查询</li>
+    </ul>
+    <ul class="drawing-panel3">
+        <input type="date" id="start" placeholder="请选择时间点" value=null min="1613-03-31" max="1633-08-11">
+        <li class="btn" onclick="gett()">查询</li>
+    </ul>
+    <script type="text/javascript" src="welcome.js"></script>
+</body>  
+</html>
